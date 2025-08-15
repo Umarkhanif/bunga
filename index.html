@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenal Timun Suri - Website Edukasi Cucumis Melo</title>
+    
+    <!-- 
+    INSTRUKSI UNTUK MEMASANG FOTO:
+    
+    1. Untuk mengganti placeholder foto dengan foto nyata:
+       - Ganti semua src="data:image/svg+xml,..." dengan src="path/to/your/image.jpg"
+       - Contoh: src="images/asal-usul.jpg"
+       - Format yang didukung: JPG, PNG, WebP
+       - Ukuran yang direkomendasikan: 300x200px untuk content cards, 300x300px untuk galeri
+    
+    2. Foto akan otomatis menyesuaikan dengan bingkai karena CSS object-fit: cover
+    3. Kualitas HD akan terjaga dengan baik
+    4. Semua foto akan memiliki efek hover dan transisi yang smooth
+    
+    5. Struktur folder yang direkomendasikan:
+       /images/
+         ├── hero-timun-suri-3d.jpg (untuk background hero)
+         ├── asal-usul.jpg
+         ├── bagian-bagian/
+         │   ├── akar.jpg
+         │   ├── batang.jpg
+         │   ├── daun.jpg
+         │   ├── bunga.jpg
+         │   ├── buah.jpg
+         │   └── biji.jpg
+         ├── manfaat/
+         │   ├── gizi.jpg
+         │   ├── kesehatan.jpg
+         │   ├── kulit.jpg
+         │   ├── rambut.jpg
+         │   ├── industri.jpg
+         │   ├── lingkungan.jpg
+         │   ├── bayi.jpg
+         │   ├── olahraga.jpg
+         │   └── otak.jpg
+         ├── varietas/
+         │   ├── timun-suri-besar.jpg
+         │   ├── timun-suri-kecil.jpg
+         │   ├── timun-suri-hijau.jpg
+         │   ├── timun-suri-kuning.jpg
+         │   ├── timun-suri-putih.jpg
+         │   ├── timun-suri-oranye.jpg
+         │   ├── timun-suri-lokal.jpg
+         │   └── timun-suri-unggul.jpg
+         ├── penelitian/
+         │   ├── genetika.jpg
+         │   ├── medis.jpg
+         │   ├── budidaya.jpg
+         │   ├── nutrisi.jpg
+         │   ├── industri.jpg
+         │   └── lingkungan.jpg
+         └── galeri/
+             ├── pohon.jpg
+             ├── buah.jpg
+             ├── bunga.jpg
+             ├── daun.jpg
+             ├── biji.jpg
+             ├── kebun.jpg
+             ├── timun-suri-besar.jpg
+             ├── timun-suri-kecil.jpg
+             ├── jus.jpg
+             ├── salad.jpg
+             ├── masker.jpg
+             └── ekstrak.jpg
+    -->
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* CSS Variables untuk Konsistensi Warna */
+        :root {
+            --primary-green: #1B5E20;
+            --secondary-green: #A5D6A7;
+            --light-green: #E8F5E8;
+            --accent-orange: #FF9800;
+            --light-orange: #FFE0B2;
+            --text-dark: #2E2E2E;
+            --text-light: #757575;
+            --white: #FFFFFF;
+            --light-gray: #F5F5F5;
+        }
+
+        /* Reset dan Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        /* Header dan Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            color: var(--accent-orange);
+        }
+
+        /* Search Bar */
+        .search-container {
+            position: relative;
+        }
+
+        .search-input {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 25px;
+            width: 250px;
+            font-size: 0.9rem;
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--accent-orange);
+            border: none;
+            color: var(--white);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /* Hamburger Menu untuk Mobile */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--white);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Home Page Styles */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(27, 94, 32, 0.3), rgba(27, 94, 32, 0.3)),
+                        url('images/hero-timun-suri-3d.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .cta-button {
+            background: var(--accent-orange);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #F57C00;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+        }
+
+        /* Random Fact Box */
+        .random-fact {
+            background: var(--light-green);
+            border-left: 5px solid var(--primary-green);
+            padding: 1.5rem;
+            margin: 2rem;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .random-fact h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 3rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .content-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .content-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .content-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .content-card img:hover {
+            transform: scale(1.05);
+        }
+
+        /* CSS untuk foto yang akan dipasang */
+        .content-card img[src*="placeholder"] {
+            background: linear-gradient(45deg, var(--light-green), var(--white));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--text-light);
+        }
+
+        /* 3D Papaya Model Container */
+        .model-container {
+            height: 500px;
+            background: var(--light-gray);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .papaya-model {
+            width: 300px;
+            height: 400px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate3d 20s infinite linear;
+        }
+
+        @keyframes rotate3d {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+
+        .model-part {
+            position: absolute;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .model-part:hover {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+
+        .part-label {
+            position: absolute;
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .model-part:hover .part-label {
+            opacity: 1;
+        }
+
+        /* Gallery Styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+        }
+
+        /* CSS untuk galeri foto */
+        .gallery-item img[src*="placeholder"] {
+            background: linear-gradient(45deg, var(--light-green), var(--white));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--text-light);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(27, 94, 32, 0.8);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Modal untuk Gallery */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            position: relative;
+            margin: auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .modal img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: var(--white);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Timeline untuk Research */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--primary-green);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: var(--accent-orange);
+            border: 4px solid var(--primary-green);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -16px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--white);
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-orange);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-orange);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: var(--primary-green);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding: 2rem 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .search-input {
+                width: 200px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 15px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0%;
+            }
+        }
+
+        /* Search Results */
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1001;
+            display: none;
+        }
+
+        .search-result-item {
+            padding: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-result-item:hover {
+            background: var(--light-green);
+        }
+
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Modal Styles untuk Popup Halaman */
+        .page-modal {
+            display: none;
+            position: fixed;
+            z-index: 3000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .page-modal-content {
+            position: relative;
+            background-color: var(--white);
+            margin: 2% auto;
+            padding: 0;
+            width: 90%;
+            max-width: 1000px;
+            max-height: 90vh;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow-y: auto;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 15px 15px 0 0;
+            position: relative;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            color: var(--white);
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .modal-close:hover {
+            transform: scale(1.2);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-body .content-grid {
+            margin-top: 1rem;
+        }
+
+        .modal-body .timeline {
+            margin-top: 2rem;
+        }
+
+        .modal-body .model-container {
+            margin: 2rem 0;
+        }
+
+        /* Responsive untuk Modal */
+        @media (max-width: 768px) {
+            .page-modal-content {
+                width: 95%;
+                margin: 5% auto;
+                max-height: 85vh;
+            }
+
+            .modal-header h2 {
+                font-size: 2rem;
+            }
+
+            .modal-body {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header dan Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>TimunSuriEdu</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#" onclick="showPage('home')" class="nav-link active">Home</a></li>
+                <li><a href="#" onclick="showPage('asal-usul')" class="nav-link">Asal Usul</a></li>
+                <li><a href="#" onclick="showPage('bagian-bagian')" class="nav-link">Bagian-Bagian</a></li>
+                <li><a href="#" onclick="showPage('manfaat')" class="nav-link">Manfaat</a></li>
+                <li><a href="#" onclick="showPage('varietas')" class="nav-link">Varietas</a></li>
+                <li><a href="#" onclick="showPage('penelitian')" class="nav-link">Penelitian</a></li>
+                <li><a href="#" onclick="showPage('budidaya')" class="nav-link">Budidaya</a></li>
+                <li><a href="#" onclick="showPage('galeri')" class="nav-link">Galeri</a></li>
+            </ul>
+
+           
+            </div>
+
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Random Fact Box -->
+        <div class="random-fact" id="randomFact">
+            <h3><i class="fas fa-lightbulb"></i> Fakta Menarik Timun Suri</h3>
+            <p id="factText">Memuat fakta acak...</p>
+        </div>
+
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Mengenal Timun Suri</h1>
+            
+                    <p style="font-size: 1.1rem; margin-top: 1rem; opacity: 0.9;">Dari Timur Tengah hingga Nusantara, temukan segala hal tentang timun suri</p>
+                    <a href="#" onclick="showPage('asal-usul')" class="cta-button">Mulai Belajar</a>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Cari tau tentang Timun Suri</h2>
+                <div class="content-grid">
+                    <div class="content-card" onclick="openModal('asal-usul-modal')" style="cursor: pointer;">
+                        <img src="asal usul.png" alt="Asal Usul Timun Suri">
+                        <h3>Asal Usul</h3>
+                        <p>Temukan perjalanan timun suri dari Timur Tengah hingga menjadi buah favorit di Indonesia.</p>
+                    </div>
+                    <div class="content-card" onclick="openModal('bagian-bagian-modal')" style="cursor: pointer;">
+                        <img src="bagian bagian.jpg" alt="Bagian Timun Suri">
+                        <h3>Bagian-Bagian</h3>
+                        <p>Pelajari anatomi lengkap tanaman timun suri dengan model 3D interaktif.</p>
+                    </div>
+                    <div class="content-card" onclick="openModal('manfaat-modal')" style="cursor: pointer;">
+                        <img src="manfaat.jpg" alt="Manfaat Timun Suri">
+                        <h3>Manfaat</h3>
+                        <p>Eksplorasi manfaat gizi, kesehatan, dan industri dari timun suri.</p>
+                    </div>
+                    <div class="content-card" onclick="showPage('budidaya')" style="cursor: pointer;">
+                        <img src="cara.jpg" alt="Cara Menanam Timun Suri">
+                        <h3>Cara Menanam</h3>
+                        <p>Pelajari teknik budidaya timun suri dari persiapan lahan hingga panen.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Modal untuk Asal Usul -->
+        <div id="asal-usul-modal" class="page-modal">
+            <div class="page-modal-content">
+                <div class="modal-header">
+                    <h2><i class="fas fa-globe-americas"></i> Asal Usul Timun Suri</h2>
+                    <span class="modal-close" onclick="closeModal('asal-usul-modal')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3>Asal Geografis</h3>
+                            <p>Timun suri (Cucumis melo var. cantalupensis) berasal dari Timur Tengah, khususnya wilayah Persia dan India. Buah ini telah dibudidayakan selama ribuan tahun di kawasan tersebut.</p>
+                        </div>
+                        
+                        <div class="content-card">
+                            <h3>Penyebaran ke Asia</h3>
+                            <p>Melalui jalur perdagangan rempah-rempah, timun suri menyebar ke Asia Tenggara. Pedagang Arab dan India membawa biji timun suri ke berbagai wilayah termasuk Indonesia.</p>
+                        </div>
+                        
+                        <div class="content-card">
+                            <h3>Timun Suri di Indonesia</h3>
+                            <p>Timun suri masuk ke Indonesia pada abad ke-15 melalui perdagangan. Kini menjadi buah favorit terutama saat bulan Ramadhan karena kesegarannya dan kandungan airnya yang tinggi untuk berbuka puasa.</p>
+                        </div>
+                        
+                        <div class="content-card">
+                            <h3>Evolusi Budidaya</h3>
+                            <p>Dari tanaman liar di padang pasir Timur Tengah, timun suri kini dibudidayakan di berbagai negara tropis dan subtropis dengan berbagai varietas unggul.</p>
+                        </div>
+                        <div class="content-card">
+                            <h3>Daerah Penghasil di Indonesia</h3>
+                            <p>Timun suri banyak dibudidayakan di Jawa Tengah, Jawa Timur, Yogyakarta, dan beberapa daerah di Sumatera. Sentra produksi terbesar ada di Magelang, Boyolali, dan Wonosobo.</p>
+                        </div>
+                        <div class="content-card">
+                            <h3>Tradisi di Indonesia</h3>
+                            <p>Timun suri menjadi bagian tak terpisahkan dari tradisi berbuka puasa di Indonesia. Buah ini sering dijadikan es buah atau jus segar untuk menghilangkan dahaga setelah berpuasa.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>2000 SM</h3>
+                                <p>Peradaban Persia mulai membudidayakan timun suri di Timur Tengah.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>1400-an</h3>
+                                <p>Pedagang Arab membawa timun suri ke Asia Tenggara melalui jalur rempah.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>1500-an</h3>
+                                <p>Timun suri mulai dibudidayakan di Indonesia oleh pedagang India.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>1800-an</h3>
+                                <p>Timun suri menjadi buah populer di Jawa dan menyebar ke seluruh Nusantara.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal untuk Bagian-Bagian -->
+        <div id="bagian-bagian-modal" class="page-modal">
+            <div class="page-modal-content">
+                <div class="modal-header">
+                    <h2><i class="fas fa-microscope"></i> Bagian-Bagian Tanaman Timun Suri</h2>
+                    <span class="modal-close" onclick="closeModal('bagian-bagian-modal')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="content-grid" style="margin-bottom: 3rem;">
+                        <div class="content-card" onclick="openImageModal('Akar Timun Suri', 'Sistem akar serabut timun suri yang menyebar horizontal dengan kedalaman 30-60 cm dan radius 1-2 meter dari batang utama.')">
+                            <img src="akar.png" alt="Akar Timun Suri">
+                            <h3>Sistem Akar</h3>
+                            <p>Timun suri memiliki sistem akar serabut yang menyebar horizontal dengan kedalaman 30-60 cm. Akar lateral menyebar hingga radius 1-2 meter dari batang utama.</p>
+                        </div>
+                        
+                        <div class="content-card" onclick="openImageModal('Batang Timun Suri', 'Batang timun suri berbentuk silindris, berbulu halus, dan merambat. Batang dapat mencapai panjang 2-4 meter dengan sulur untuk memanjat.')">
+                            <img src="batang.jpg" alt="Batang Timun Suri">
+                            <h3>Batang</h3>
+                            <p>Batang timun suri berbentuk silindris, berbulu halus, dan merambat. Batang dapat mencapai panjang 2-4 meter dengan sulur untuk memanjat.</p>
+                        </div>
+                        
+                        <div class="content-card" onclick="openImageModal('Daun Timun Suri', 'Daun timun suri berbentuk jantung dengan tepi bergerigi. Daun berwarna hijau dengan permukaan berbulu halus dan ukuran 8-15 cm.')">
+                            <img src="daun.jpg" alt="Daun Timun Suri">
+                            <h3>Daun</h3>
+                            <p>Daun timun suri berbentuk jantung dengan tepi bergerigi. Daun berwarna hijau dengan permukaan berbulu halus dan ukuran 8-15 cm.</p>
+                        </div>
+                        
+                        <div class="content-card" onclick="openImageModal('Bunga Timun Suri', 'Timun suri memiliki bunga jantan dan betina terpisah. Bunga jantan berbentuk terompet kuning, bunga betina berbentuk lonceng dengan bakal buah.')">
+                            <img src="bunga.jpg" alt="Bunga Timun Suri">
+                            <h3>Bunga</h3>
+                            <p>Timun suri memiliki bunga jantan dan betina terpisah. Bunga jantan berbentuk terompet kuning, bunga betina berbentuk lonceng dengan bakal buah.</p>
+                        </div>
+                        
+                        <div class="content-card" onclick="openImageModal('Buah Timun Suri', 'Buah timun suri berbentuk bulat atau lonjong dengan kulit berwarna hijau kekuningan. Daging buah berwarna putih kekuningan dengan biji di tengah.')">
+                            <img src="buah1.jpg"Buah Timun Suri">
+                            <h3>Buah</h3>
+                            <p>Buah timun suri berbentuk bulat atau lonjong dengan kulit berwarna hijau kekuningan. Daging buah berwarna putih kekuningan dengan biji di tengah.</p>
+                        </div>
+                        
+                        <div class="content-card" onclick="openImageModal('Biji Timun Suri', 'Biji timun suri berwarna putih kekuningan, pipih, dan berbentuk oval. Satu buah timun suri dapat mengandung 200-500 biji.')">
+                            <img src="biji.jpg" alt="Biji Timun Suri">
+                            <h3>Biji</h3>
+                            <p>Biji timun suri berwarna putih kekuningan, pipih, dan berbentuk oval. Satu buah timun suri dapat mengandung 200-500 biji.</p>
+                        </div>
+                    </div>
+
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal untuk Manfaat -->
+        <div id="manfaat-modal" class="page-modal">
+            <div class="page-modal-content">
+                <div class="modal-header">
+                    <h2><i class="fas fa-heart"></i> Manfaat Timun Suri</h2>
+                    <span class="modal-close" onclick="closeModal('manfaat-modal')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <img src="GIZI1.jpg" alt="Manfaat Gizi">
+                            <h3>Manfaat Gizi</h3>
+                            <p>Timun suri kaya akan air (95%), vitamin C (8 mg/100g), vitamin A (169 IU), dan serat (0.9g). Buah ini sangat baik untuk menghidrasi tubuh dan memenuhi kebutuhan cairan harian.</p>
+                        </div>
+                        <div class="content-card">
+                            <img src="kesehatan.jpg" alt="Manfaat Kesehatan">
+                            <h3>Manfaat Kesehatan</h3>
+                            <p>Timun suri membantu menurunkan tekanan darah dan menjaga kesehatan jantung. Kandungan kalium yang tinggi membantu mengatur tekanan darah dan fungsi otot.</p>
+                        </div>
+                        <div class="content-card">
+                            <img src="kulit.jpg" alt="Manfaat Kulit">
+                            <h3>Manfaat Kulit</h3>
+                            <p>Timun suri dapat digunakan sebagai masker alami untuk menyejukkan kulit dan mengurangi bengkak. Kandungan air yang tinggi membantu melembapkan kulit.</p>
+                        </div>
+                        <div class="content-card">
+                            <img src="rambut.jpg" alt="Manfaat Rambut">
+                            <h3>Manfaat Rambut</h3>
+                            <p>Ekstrak timun suri dapat digunakan untuk merawat rambut, membuatnya lebih lembut dan berkilau. Kandungan silika membantu memperkuat rambut.</p>
+                        </div>
+                        <div class="content-card">
+                            <img src="industri.jpg" alt="Manfaat Industri">
+                            <h3>Manfaat Industri</h3>
+                            <p>Timun suri digunakan dalam industri makanan untuk pembuatan jus, es buah, dan berbagai produk minuman segar. Juga digunakan dalam kosmetik untuk produk perawatan kulit.</p>
+                        </div>
+                        <div class="content-card">
+                            <img src="lingkungan.jpg" alt="Manfaat Lingkungan">
+                            <h3>Manfaat Lingkungan</h3>
+                            <p>Tanaman timun suri dapat membantu mengurangi suhu lingkungan dan menyediakan naungan. Daun timun suri juga dapat digunakan sebagai pakan ternak.</p>
+                        </div>
+                        <div class="content-card">
+                            <img src="bayi.jpg" alt="Manfaat untuk Bayi">
+                            <h3>Manfaat untuk Bayi</h3>
+                            <p>Timun suri matang dapat diberikan sebagai makanan pendamping ASI (MPASI) karena teksturnya yang lembut dan kandungan airnya yang tinggi untuk hidrasi bayi.</p>
+                        </div>
+                        <div class="content-card">
+                            <img src="olahraga.jpg" alt="Manfaat untuk Olahragawan">
+                            <h3>Manfaat untuk Olahragawan</h3>
+                            <p>Timun suri membantu rehidrasi tubuh setelah olahraga karena kandungan air yang tinggi dan elektrolit alami yang membantu pemulihan otot.</p>
+                        </div>
+                        <div class="content-card">
+                            <img src="otak.jpg" alt="Manfaat untuk Otak">
+                            <h3>Manfaat untuk Otak</h3>
+                            <p>Kandungan vitamin B6 dalam timun suri membantu produksi neurotransmitter yang penting untuk fungsi otak dan mencegah penurunan kognitif.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halaman Asal Usul -->
+        <div id="asal-usul" class="page">
+            <section class="content-section">
+                <h2 class="section-title">Asal Usul Timun Suri</h2>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Asal Geografis</h3>
+                        <p>Timun suri (Cucumis melo var. cantalupensis) berasal dari Timur Tengah, khususnya wilayah Persia dan India. Buah ini telah dibudidayakan selama ribuan tahun di kawasan tersebut.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Penyebaran ke Asia</h3>
+                        <p>Melalui jalur perdagangan rempah-rempah, timun suri menyebar ke Asia Tenggara. Pedagang Arab dan India membawa biji timun suri ke berbagai wilayah termasuk Indonesia.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Timun Suri di Indonesia</h3>
+                        <p>Timun suri masuk ke Indonesia pada abad ke-15 melalui perdagangan. Kini menjadi buah favorit terutama saat bulan Ramadhan karena kesegarannya.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Evolusi Budidaya</h3>
+                        <p>Dari tanaman liar di padang pasir Timur Tengah, timun suri kini dibudidayakan di berbagai negara tropis dan subtropis dengan berbagai varietas unggul.</p>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2000 SM</h3>
+                            <p>Peradaban Persia mulai membudidayakan timun suri di Timur Tengah.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>1400-an</h3>
+                            <p>Pedagang Arab membawa timun suri ke Asia Tenggara melalui jalur rempah.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>1500-an</h3>
+                            <p>Timun suri mulai dibudidayakan di Indonesia oleh pedagang India.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>1800-an</h3>
+                            <p>Timun suri menjadi buah populer di Jawa dan menyebar ke seluruh Nusantara.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Halaman Bagian-Bagian -->
+        <div id="bagian-bagian" class="page">
+            <section class="content-section">
+                <h2 class="section-title">Bagian-Bagian Tanaman Timun Suri</h2>
+                
+                <div class="content-grid" style="margin-bottom: 3rem;">
+                    <div class="content-card" onclick="openImageModal('Akar Timun Suri', 'Sistem akar serabut timun suri yang menyebar horizontal dengan kedalaman 30-60 cm dan radius 1-2 meter dari batang utama.')">
+                        <img src="akar.png" alt="Akar Timun Suri">
+                        <h3>Sistem Akar</h3>
+                        <p>Timun suri memiliki sistem akar serabut yang menyebar horizontal dengan kedalaman 30-60 cm. Akar lateral menyebar hingga radius 1-2 meter dari batang utama.</p>
+                    </div>
+                    
+                    <div class="content-card" onclick="openImageModal('Batang Timun Suri', 'Batang timun suri berbentuk silindris, berbulu halus, dan merambat. Batang dapat mencapai panjang 2-4 meter dengan sulur untuk memanjat.')">
+                        <img src="batang.jpg" alt="Batang Timun Suri">
+                        <h3>Batang</h3>
+                        <p>Batang timun suri berbentuk silindris, berbulu halus, dan merambat. Batang dapat mencapai panjang 2-4 meter dengan sulur untuk memanjat.</p>
+                    </div>
+                    
+                    <div class="content-card" onclick="openImageModal('Daun Timun Suri', 'Daun timun suri berbentuk jantung dengan tepi bergerigi. Daun berwarna hijau dengan permukaan berbulu halus dan ukuran 8-15 cm.')">
+                        <img src="daun.jpg" alt="Daun Timun Suri">
+                        <h3>Daun</h3>
+                        <p>Daun timun suri berbentuk jantung dengan tepi bergerigi. Daun berwarna hijau dengan permukaan berbulu halus dan ukuran 8-15 cm.</p>
+                    </div>
+                    
+                    <div class="content-card" onclick="openImageModal('Bunga Timun Suri', 'Timun suri memiliki bunga jantan dan betina terpisah. Bunga jantan berbentuk terompet kuning, bunga betina berbentuk lonceng dengan bakal buah.')">
+                        <img src="bunga.jpg" alt="Bunga Timun Suri">
+                        <h3>Bunga</h3>
+                        <p>Timun suri memiliki bunga jantan dan betina terpisah. Bunga jantan berbentuk terompet kuning, bunga betina berbentuk lonceng dengan bakal buah.</p>
+                    </div>
+                    
+                    <div class="content-card" onclick="openImageModal('Buah Timun Suri', 'Buah timun suri berbentuk bulat atau lonjong dengan kulit berwarna hijau kekuningan. Daging buah berwarna putih kekuningan dengan biji di tengah.')">
+                        <img src="buah1.jpg" alt="Buah Timun Suri">
+                        <h3>Buah</h3>
+                        <p>Buah timun suri berbentuk bulat atau lonjong dengan kulit berwarna hijau kekuningan. Daging buah berwarna putih kekuningan dengan biji di tengah.</p>
+                    </div>
+                    
+                    <div class="content-card" onclick="openImageModal('Biji Timun Suri', 'Biji timun suri berwarna putih kekuningan, pipih, dan berbentuk oval. Satu buah timun suri dapat mengandung 200-500 biji.')">
+                        <img src="biji.jpg" alt="Biji Timun Suri">
+                        <h3>Biji</h3>
+                        <p>Biji timun suri berwarna putih kekuningan, pipih, dan berbentuk oval. Satu buah timun suri dapat mengandung 200-500 biji.</p>
+                    </div>
+                </div>      
+            </section>
+        </div>
+
+        <!-- Halaman Manfaat -->
+        <div id="manfaat" class="page">
+            <section class="content-section">
+                <h2 class="section-title">Manfaat Timun Suri</h2>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <img src="gizi.jpg" alt="Manfaat Gizi">
+                        <h3>Manfaat Gizi</h3>
+                        <p>Timun suri kaya akan air (95%), vitamin C (8 mg/100g), vitamin A (169 IU), dan serat (0.9g). Buah ini sangat baik untuk menghidrasi tubuh dan memenuhi kebutuhan cairan harian.</p>
+                    </div>
+                    <div class="content-card">
+                        <img src="kesehatan.jpg" alt="Manfaat Kesehatan">
+                        <h3>Manfaat Kesehatan</h3>
+                        <p>Timun suri membantu menurunkan tekanan darah dan menjaga kesehatan jantung. Kandungan kalium yang tinggi membantu mengatur tekanan darah dan fungsi otot. Juga baik untuk kesehatan ginjal dan mencegah stroke serta diabetes dan kolesterol tinggi serta asam urat dan batu ginjal serta kanker.</p>
+                    </div>
+                    <div class="content-card">
+                        <img src="kulit.jpg" alt="Manfaat Kulit">
+                        <h3>Manfaat Kulit</h3>
+                        <p>Timun suri dapat digunakan sebagai masker alami untuk menyejukkan kulit dan mengurangi bengkak. Kandungan air yang tinggi membantu melembapkan kulit dan mengurangi jerawat. Juga baik untuk mencerahkan kulit dan anti-aging serta mencegah penuaan dini dan keriput serta flek hitam dan komedo.</p>
+                    </div>
+                    <div class="content-card">
+                        <img src="rambut.jpg" alt="Manfaat Rambut">
+                        <h3>Manfaat Rambut</h3>
+                        <p>Ekstrak timun suri dapat digunakan untuk merawat rambut, membuatnya lebih lembut dan berkilau. Kandungan silika membantu memperkuat rambut dan mencegah kerontokan. Juga baik untuk mengatasi ketombe dan merangsang pertumbuhan rambut serta mencegah uban dini dan rambut bercabang serta rambut kering dan rambut rontok.</p>
+                    </div>
+                    <div class="content-card">
+                        <img src="industri.jpg" alt="Manfaat Industri">
+                        <h3>Manfaat Industri</h3>
+                        <p>Timun suri digunakan dalam industri makanan untuk pembuatan jus, es buah, dan berbagai produk minuman segar. Juga digunakan dalam kosmetik untuk produk perawatan kulit dan farmasi untuk obat-obatan serta suplemen kesehatan dan produk herbal serta aromaterapi dan spa serta salon kecantikan.</p>
+                    </div>
+                    <div class="content-card">
+                        <img src="lingkungan.jpg" alt="Manfaat Lingkungan">
+                        <h3>Manfaat Lingkungan</h3>
+                        <p>Tanaman timun suri dapat membantu mengurangi suhu lingkungan dan menyediakan naungan. Daun timun suri juga dapat digunakan sebagai pakan ternak. Baik untuk konservasi tanah dan air serta mengurangi polusi udara dan mencegah pemanasan global serta perubahan iklim dan banjir serta longsor.</p>
+                    </div>
+                    <div class="content-card">
+                        <img src="bayi.jpg" alt="Manfaat untuk Bayi">
+                        <h3>Manfaat untuk Bayi</h3>
+                        <p>Timun suri matang dapat diberikan sebagai makanan pendamping ASI (MPASI) karena teksturnya yang lembut dan kandungan airnya yang tinggi untuk hidrasi bayi. Baik untuk pertumbuhan dan perkembangan bayi serta sistem kekebalan tubuh dan kesehatan mata dan tulang serta gigi dan otak dan jantung.</p>
+                    </div>
+                    <div class="content-card">
+                        <img src="olahraga.jpg" alt="Manfaat untuk Olahragawan">
+                        <h3>Manfaat untuk Olahragawan</h3>
+                        <p>Timun suri membantu rehidrasi tubuh setelah olahraga karena kandungan air yang tinggi dan elektrolit alami yang membantu pemulihan otot dan mengurangi kelelahan. Juga baik untuk meningkatkan performa olahraga dan mencegah kram otot serta cedera dan peradangan serta nyeri sendi dan osteoporosis.</p>
+                    </div>
+                    <div class="content-card">
+                        <img src="otak.jpg" alt="Manfaat untuk Otak">
+                        <h3>Manfaat untuk Otak</h3>
+                        <p>Kandungan vitamin B6 dalam timun suri membantu produksi neurotransmitter yang penting untuk fungsi otak dan mencegah penurunan kognitif. Baik untuk konsentrasi dan daya ingat serta mencegah Alzheimer dan depresi serta kecemasan dan insomnia serta stres.</p>
+                    </div>
+                   
+                    <div class="content-card">
+                        <img src="pencernaan.jpg" alt="Manfaat Pencernaan">
+                        <h3>Manfaat Pencernaan</h3>
+                        <p>Timun suri membantu melancarkan pencernaan karena kandungan serat dan air yang tinggi. Baik untuk mencegah sembelit dan menjaga kesehatan usus. Juga membantu detoksifikasi tubuh dan mencegah kanker usus serta maag dan asam lambung dan wasir serta diare.</p>
+                    </div>
+                    <div class="content-card">
+                        <img src="diet.jpg" alt="Manfaat Diet">
+                        <h3>Manfaat Diet</h3>
+                        <p>Timun suri cocok untuk program diet karena rendah kalori (34 kcal/100g) dan tinggi serat. Memberikan rasa kenyang tanpa menambah berat badan. Baik untuk program penurunan berat badan dan menjaga metabolisme tubuh serta mencegah obesitas dan diabetes serta penyakit jantung dan hipertensi.</p>
+                    </div>
+                </div>
+
+                <div class="content-section" style="margin-top: 4rem;">
+                    <h3 style="text-align: center; color: var(--primary-green); margin-bottom: 2rem;">Kandungan Nutrisi Timun Suri (per 100g)</h3>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3>Vitamin</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🍊 <strong>Vitamin C:</strong> 8 mg (13% AKG)</li>
+                                <li>🥕 <strong>Vitamin A:</strong> 169 IU (3% AKG)</li>
+                                <li>🍃 <strong>Vitamin K:</strong> 2.8 mcg (3% AKG)</li>
+                                <li>🧠 <strong>Vitamin B6:</strong> 0.041 mg (3% AKG)</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Mineral</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🫘 <strong>Kalium:</strong> 267 mg (8% AKG)</li>
+                                <li>🥛 <strong>Kalsium:</strong> 9 mg (1% AKG)</li>
+                                <li>🔴 <strong>Magnesium:</strong> 12 mg (3% AKG)</li>
+                                <li>💪 <strong>Fosfor:</strong> 15 mg (2% AKG)</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Nutrisi Lainnya</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🌾 <strong>Serat:</strong> 0.9g (4% AKG)</li>
+                                <li>🍯 <strong>Gula:</strong> 5.7g</li>
+                                <li>💧 <strong>Air:</strong> 95.2g</li>
+                                <li>🔥 <strong>Kalori:</strong> 34 kcal</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section" style="margin-top: 4rem;">
+                    <h3 style="text-align: center; color: var(--primary-green); margin-bottom: 2rem;">Perbedaan Timun Suri dengan Timun Biasa</h3>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3>Timun Suri</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🍈 <strong>Bentuk:</strong> Bulat atau lonjong besar</li>
+                                <li>🟡 <strong>Warna:</strong> Hijau kekuningan</li>
+                                <li>🍯 <strong>Rasa:</strong> Manis segar</li>
+                                <li>💧 <strong>Kandungan Air:</strong> 95%</li>
+                                <li>🌱 <strong>Tanaman:</strong> Merambat</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Timun Biasa</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🥒 <strong>Bentuk:</strong> Panjang silindris</li>
+                                <li>🟢 <strong>Warna:</strong> Hijau tua</li>
+                                <li>🥒 <strong>Rasa:</strong> Segar sedikit pahit</li>
+                                <li>💧 <strong>Kandungan Air:</strong> 96%</li>
+                                <li>🌱 <strong>Tanaman:</strong> Merambat</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Kegunaan</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🍉 <strong>Timun Suri:</strong> Buah pencuci mulut, jus, es buah</li>
+                                <li>🥒 <strong>Timun Biasa:</strong> Sayuran, lalapan, acar</li>
+                                <li>🍹 <strong>Minuman:</strong> Timun suri lebih manis</li>
+                                <li>🥗 <strong>Salad:</strong> Timun biasa lebih renyah</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section" style="margin-top: 4rem;">
+                    <h3 style="text-align: center; color: var(--primary-green); margin-bottom: 2rem;">Kegunaan Timun Suri dalam Kehidupan Sehari-hari</h3>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3>Konsumsi Langsung</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🍉 <strong>Buah Segar:</strong> Dimakan langsung sebagai buah pencuci mulut</li>
+                                <li>🥤 <strong>Jus Segar:</strong> Dibuat menjadi jus untuk minuman sehat</li>
+                                <li>🍹 <strong>Es Buah:</strong> Campuran dalam es buah untuk berbuka puasa</li>
+                                <li>🥗 <strong>Salad Buah:</strong> Bahan dalam salad buah segar</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Pengolahan Makanan</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🍰 <strong>Kue dan Roti:</strong> Bahan dalam pembuatan kue tradisional</li>
+                                <li>🍨 <strong>Es Krim:</strong> Rasa timun suri dalam es krim</li>
+                                <li>🍯 <strong>Selai:</strong> Dibuat menjadi selai buah</li>
+                                <li>🥤 <strong>Minuman Kemasan:</strong> Bahan dalam minuman kemasan</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Kegunaan Lainnya</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🧴 <strong>Kosmetik:</strong> Bahan dalam produk perawatan kulit</li>
+                                <li>🌿 <strong>Pakan Ternak:</strong> Daun dan batang untuk pakan ternak</li>
+                                <li>🌱 <strong>Tanaman Hias:</strong> Tanaman merambat untuk dekorasi</li>
+                                <li>🌍 <strong>Lingkungan:</strong> Menyejukkan udara sekitar</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section" style="margin-top: 4rem;">
+                    <h3 style="text-align: center; color: var(--primary-green); margin-bottom: 2rem;">Cara Mengolah Timun Suri</h3>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3>Persiapan</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🧼 <strong>Cuci:</strong> Bersihkan kulit timun suri</li>
+                                <li>🔪 <strong>Potong:</strong> Belah dan buang biji</li>
+                                <li>🍽️ <strong>Siapkan:</strong> Siapkan bahan tambahan</li>
+                                <li>❄️ <strong>Dinginkan:</strong> Simpan di kulkas jika perlu</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Pengolahan</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🥤 <strong>Jus:</strong> Blender dengan air dan gula</li>
+                                <li>🍹 <strong>Es Buah:</strong> Campur dengan buah lain</li>
+                                <li>🥗 <strong>Salad:</strong> Potong dadu untuk salad</li>
+                                <li>🍰 <strong>Kue:</strong> Parut untuk bahan kue</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Penyajian</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>❄️ <strong>Dingin:</strong> Sajikan dalam keadaan dingin</li>
+                                <li>🍯 <strong>Manis:</strong> Tambahkan madu atau gula</li>
+                                <li>🍋 <strong>Asam:</strong> Tambahkan jeruk nipis</li>
+                                <li>🌿 <strong>Garnish:</strong> Hias dengan daun mint</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Halaman Varietas -->
+        <div id="varietas" class="page">
+            <section class="content-section">
+                <h2 class="section-title">Varietas Timun Suri</h2>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <img src="besar.jpg" alt="Timun Suri Besar">
+                        <h3>Timun Suri Besar</h3>
+                        <p>Varietas unggul dengan buah besar berbentuk lonjong, daging tebal berwarna putih kekuningan, rasa manis segar, dan kandungan air tinggi. Cocok untuk konsumsi segar dan jus.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="kecil.jpg" alt="Timun Suri Kecil">
+                        <h3>Timun Suri Kecil</h3>
+                        <p>Varietas dengan buah kecil berbentuk bulat, kulit hijau kekuningan, daging tebal berwarna putih, dan rasa manis segar.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="hijau.jpg" alt="Timun Suri Hijau">
+                        <h3>Timun Suri Hijau</h3>
+                        <p>Varietas dengan kulit berwarna hijau tua, daging tebal berwarna putih kekuningan, rasa manis, dan cocok untuk konsumsi pribadi.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="kuning.jpg" alt="Timun Suri Kuning">
+                        <h3>Timun Suri Kuning</h3>
+                        <p>Varietas lokal Indonesia dengan kulit berwarna kuning, daging berwarna putih kekuningan, rasa manis segar, dan kandungan air tinggi.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="putih.jpg" alt="Timun Suri Putih">
+                        <h3>Timun Suri Putih</h3>
+                        <p>Varietas unggul dengan kulit berwarna putih kekuningan, daging tebal berwarna putih, rasa manis, dan produktivitas tinggi.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="orange.jpg" alt="Timun Suri Oranye">
+                        <h3>Timun Suri Oranye</h3>
+                        <p>Varietas dengan kulit berwarna oranye, daging berwarna putih kekuningan, rasa manis segar, dan cocok untuk ekspor.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="lokal.jpg" alt="Timun Suri Lokal">
+                        <h3>Timun Suri Lokal</h3>
+                        <p>Varietas hasil budidaya lokal dengan buah sedang, daging tebal berwarna putih, rasa manis, tahan penyakit, dan produktivitas tinggi.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="unggul.png" alt="Timun Suri Unggul">
+                        <h3>Timun Suri Unggul</h3>
+                        <p>Varietas unggul dengan buah lonjong, daging tebal berwarna putih kekuningan, rasa manis, dan kandungan vitamin C tinggi.</p>
+                    </div>
+                </div>
+
+                <div class="content-section" style="margin-top: 4rem;">
+                    <h3 style="text-align: center; color: var(--primary-green); margin-bottom: 2rem;">Karakteristik Varietas Timun Suri</h3>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3>Berdasarkan Ukuran Buah</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🍊 <strong>Besar:</strong> Timun Suri Besar, Timun Suri Unggul</li>
+                                <li>🍈 <strong>Sedang:</strong> Timun Suri Lokal, Timun Suri Hijau</li>
+                                <li>🥭 <strong>Kecil:</strong> Timun Suri Kecil, Timun Suri Kuning</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Berdasarkan Warna Kulit</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🟢 <strong>Hijau:</strong> Timun Suri Hijau, Timun Suri Besar</li>
+                                <li>🟡 <strong>Kuning:</strong> Timun Suri Kuning, Timun Suri Putih</li>
+                                <li>🟠 <strong>Oranye:</strong> Timun Suri Oranye</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Berdasarkan Rasa</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🍯 <strong>Manis:</strong> Timun Suri Kecil, Timun Suri Unggul</li>
+                                <li>🍊 <strong>Manis Segar:</strong> Timun Suri Besar, Timun Suri Hijau</li>
+                                <li>🍋 <strong>Segar:</strong> Timun Suri Kuning, Timun Suri Oranye</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Halaman Penelitian -->
+        <div id="penelitian" class="page">
+            <section class="content-section">
+                <h2 class="section-title">Penelitian Timun Suri</h2>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <img src="genetika.jpg" alt="Penelitian Genetika">
+                        <h3>Penelitian Genetika Timun Suri</h3>
+                        <p>Penelitian sequencing genom timun suri yang dilakukan oleh University of California pada tahun 2012. Mengungkap 27.427 gen yang berkontribusi pada pertumbuhan dan perkembangan buah.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="medis.jpg" alt="Penelitian Medis">
+                        <h3>Penelitian Medis</h3>
+                        <p>Studi klinis menunjukkan bahwa timun suri dapat membantu menurunkan tekanan darah dan menjaga kesehatan jantung. Penelitian di India menemukan efektivitas timun suri dalam pengobatan hipertensi.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="kebun.jpg" alt="Penelitian Budidaya">
+                        <h3>Penelitian Budidaya</h3>
+                        <p>Penelitian IPB Bogor mengembangkan varietas timun suri tahan penyakit embun tepung. Hasil penelitian menunjukkan peningkatan produktivitas hingga 35% pada varietas unggul.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="nutrisi.jpg" alt="Penelitian Nutrisi">
+                        <h3>Penelitian Nutrisi</h3>
+                        <p>Analisis kandungan nutrisi timun suri menunjukkan tingginya kandungan air (95%), vitamin C (8 mg/100g), dan kalium (267 mg). Penelitian di Thailand menemukan kandungan elektrolit yang tinggi.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="industri1.jpg" alt="Penelitian Industri">
+                        <h3>Penelitian Industri</h3>
+                        <p>Penelitian di Malaysia mengembangkan metode pengolahan timun suri untuk industri makanan dan minuman. Hasilnya meningkatkan efisiensi produksi hingga 50%.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="lingkungan1.jpg" alt="Penelitian Lingkungan">
+                        <h3>Penelitian Lingkungan</h3>
+                        <p>Studi di Indonesia menunjukkan bahwa budidaya timun suri dapat membantu mengurangi suhu lingkungan. Tanaman timun suri efektif dalam menyediakan naungan dan menyejukkan udara.</p>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2012</h3>
+                            <p>University of California berhasil melakukan sequencing genom timun suri, mengungkap 27.427 gen.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2014</h3>
+                            <p>IPB Bogor mengembangkan varietas timun suri tahan penyakit embun tepung.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2016</h3>
+                            <p>Penelitian di India menemukan efektivitas timun suri dalam pengobatan hipertensi.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2018</h3>
+                            <p>Studi di Thailand mengungkap kandungan elektrolit tinggi dalam timun suri.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2020</h3>
+                            <p>Penelitian di Malaysia mengembangkan metode pengolahan timun suri untuk industri.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2022</h3>
+                            <p>Studi di Indonesia membuktikan efektivitas timun suri dalam menyejukkan lingkungan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section" style="margin-top: 4rem;">
+                    <h3 style="text-align: center; color: var(--primary-green); margin-bottom: 2rem;">Statistik Penelitian Timun Suri</h3>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3>Publikasi Ilmiah</h3>
+                            <p style="font-size: 2rem; color: var(--primary-green); text-align: center; margin: 1rem 0;">1,800+</p>
+                            <p>Jumlah publikasi ilmiah tentang timun suri dalam 10 tahun terakhir</p>
+                        </div>
+                        <div class="content-card">
+                            <h3>Peneliti Aktif</h3>
+                            <p style="font-size: 2rem; color: var(--primary-green); text-align: center; margin: 1rem 0;">300+</p>
+                            <p>Peneliti yang aktif meneliti timun suri di seluruh dunia</p>
+                        </div>
+                        <div class="content-card">
+                            <h3>Institusi Penelitian</h3>
+                            <p style="font-size: 2rem; color: var(--primary-green); text-align: center; margin: 1rem 0;">100+</p>
+                            <p>Universitas dan institusi penelitian yang fokus pada timun suri</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Halaman Budidaya -->
+        <div id="budidaya" class="page">
+            <section class="content-section">
+                <h2 class="section-title">Cara Menanam Timun Suri</h2>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <img src="lahan.jpg" alt="Persiapan Lahan">
+                        <h3>Persiapan Lahan</h3>
+                        <p>Pilih lahan yang subur dengan pH 6-7. Olah tanah hingga gembur dan buat bedengan dengan lebar 1-1.5 meter. Berikan pupuk kandang atau kompos secukupnya.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="benih.webp" alt="Penyemaian Benih">
+                        <h3>Penyemaian Benih</h3>
+                        <p>Semai benih timun suri dalam polybag atau tray semai. Gunakan media tanam campuran tanah, pupuk kandang, dan sekam padi dengan perbandingan 2:1:1.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="penanaman.jpg" alt="Penanaman">
+                        <h3>Penanaman</h3>
+                        <p>Tanam bibit timun suri yang sudah berumur 10-14 hari ke lahan dengan jarak tanam 60x60 cm. Pastikan bibit sudah memiliki 2-3 daun sejati.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="pupuk.jpg" alt="Pemupukan">
+                        <h3>Pemupukan</h3>
+                        <p>Berikan pupuk NPK dengan dosis 200 kg/ha pada umur 7, 21, dan 35 hari setelah tanam. Tambahkan pupuk organik untuk hasil yang lebih baik.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="penyiraman.jpg" alt="Penyiraman">
+                        <h3>Penyiraman</h3>
+                        <p>Lakukan penyiraman secara rutin pagi dan sore hari, terutama pada musim kemarau. Pastikan tanah tetap lembab namun tidak tergenang air.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="cabang.jpg" alt="Pemangkasan">
+                        <h3>Pemangkasan</h3>
+                        <p>Lakukan pemangkasan pada cabang yang tidak produktif dan daun yang layu. Ini akan membantu tanaman fokus pada pertumbuhan buah.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="hama.jpg" alt="Pengendalian Hama">
+                        <h3>Pengendalian Hama</h3>
+                        <p>Waspadai hama seperti kutu daun, ulat grayak, dan penyakit embun tepung. Gunakan pestisida organik atau kimia sesuai dosis yang dianjurkan.</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <img src="panen.jpg" alt="Panen">
+                        <h3>Panen</h3>
+                        <p>Timun suri siap panen pada umur 60-70 hari setelah tanam. Ciri buah siap panen adalah kulit berwarna hijau kekuningan dan daging buah sudah lunak.</p>
+                    </div>
+                    <div class="content-card">
+                        <img src="simpan.jpg" alt="Penyimpanan">
+                        <h3>Penyimpanan</h3>
+                        <p>Simpan timun suri di tempat yang sejuk dan kering. Buah dapat bertahan hingga 2-3 minggu jika disimpan dengan benar. Hindari menyimpan di tempat yang terlalu dingin.</p>
+                    </div>
+                </div>
+
+                <div class="content-section" style="margin-top: 4rem;">
+                    <h3 style="text-align: center; color: var(--primary-green); margin-bottom: 2rem;">Tips Budidaya Timun Suri</h3>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3>Waktu Tanam Terbaik</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🌱 <strong>Musim Hujan:</strong> Januari - Maret</li>
+                                <li>🌱 <strong>Musim Kemarau:</strong> Juni - Agustus</li>
+                                <li>🌱 <strong>Musim Pancaroba:</strong> April - Mei</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Musim Panen</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🌾 <strong>Puncak Panen:</strong> Maret - April</li>
+                                <li>🌾 <strong>Musim Ramadhan:</strong> April - Mei</li>
+                                <li>🌾 <strong>Panen Akhir:</strong> Agustus - September</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Kondisi Lingkungan</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>🌡️ <strong>Suhu:</strong> 25-30°C</li>
+                                <li>💧 <strong>Kelembaban:</strong> 60-80%</li>
+                                <li>☀️ <strong>Cahaya:</strong> Full sun</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Perawatan Rutin</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>💧 <strong>Penyiraman:</strong> 2x sehari</li>
+                                <li>🌱 <strong>Pemupukan:</strong> Setiap 2 minggu</li>
+                                <li>✂️ <strong>Pemangkasan:</strong> Setiap minggu</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Harga Pasar</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>💰 <strong>Musim Panen:</strong> Rp 5.000 - 8.000/kg</li>
+                                <li>💰 <strong>Musim Ramadhan:</strong> Rp 8.000 - 15.000/kg</li>
+                                <li>💰 <strong>Musim Langka:</strong> Rp 15.000 - 25.000/kg</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section" style="margin-top: 4rem;">
+                    <h3 style="text-align: center; color: var(--primary-green); margin-bottom: 2rem;">Resep Timun Suri Favorit</h3>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3>Es Timun Suri Segar</h3>
+                            <p><strong>Bahan:</strong> Timun suri, gula pasir, air, es batu</p>
+                            <p><strong>Cara:</strong> Blender timun suri dengan air dan gula, saring, tambahkan es batu. Sajikan dingin.</p>
+                        </div>
+                        <div class="content-card">
+                            <h3>Jus Timun Suri Campur</h3>
+                            <p><strong>Bahan:</strong> Timun suri, jeruk, madu, air</p>
+                            <p><strong>Cara:</strong> Campur timun suri dengan jeruk, tambahkan madu dan air. Blender hingga halus.</p>
+                        </div>
+                        <div class="content-card">
+                            <h3>Salad Timun Suri</h3>
+                            <p><strong>Bahan:</strong> Timun suri, buah-buahan lain, yogurt, madu</p>
+                            <p><strong>Cara:</strong> Potong timun suri dan buah lain, campur dengan yogurt dan madu.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section" style="margin-top: 4rem;">
+                    <h3 style="text-align: center; color: var(--primary-green); margin-bottom: 2rem;">Tips Memilih Timun Suri yang Baik</h3>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3>Ciri Fisik</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>👁️ <strong>Warna:</strong> Hijau kekuningan merata</li>
+                                <li>🤏 <strong>Tekstur:</strong> Kulit halus tidak berkerut</li>
+                                <li>⚖️ <strong>Berat:</strong> Berat dan padat</li>
+                                <li>🔍 <strong>Bentuk:</strong> Bulat atau lonjong simetris</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Yang Harus Dihindari</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>❌ <strong>Memar:</strong> Ada bintik hitam atau memar</li>
+                                <li>❌ <strong>Lunak:</strong> Terlalu lunak saat ditekan</li>
+                                <li>❌ <strong>Keriput:</strong> Kulit berkerut dan kering</li>
+                                <li>❌ <strong>Bau:</strong> Bau tidak sedap atau asam</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>Kualitas Terbaik</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li>✅ <strong>Segar:</strong> Baru dipetik dari pohon</li>
+                                <li>✅ <strong>Manis:</strong> Rasa manis segar</li>
+                                <li>✅ <strong>Juicy:</strong> Banyak air dan segar</li>
+                                <li>✅ <strong>Bersih:</strong> Tidak ada noda atau kotoran</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Halaman Galeri -->
+        <div id="galeri" class="page">
+            <section class="content-section">
+                <h2 class="section-title">Galeri Kita</h2>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openImageModal('Tanaman Timun Suri Dewasa', 'Tanaman timun suri dewasa dengan batang merambat, daun hijau berbentuk jantung, dan buah yang sedang berkembang.')">
+                        <img src="galeri1.jpg" alt="Tanaman Timun Suri Dewasa">
+                        <div class="gallery-overlay">
+                            <h3>Dokumentasi saat project PKWU</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Modal untuk Gambar Galeri -->
+        <div id="imageModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeImageModal()">&times;</span>
+                <img id="modalImage" src="" alt="">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tentang TimunSuriEdu</h3>
+                <p>Platform edukasi untuk mempelajari segala hal tentang tanaman timun suri.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p>Email: khanifffuuuu@gmail.com</p>
+                <p></p>
+            </div>
+            <div class="footer-section">
+                <h3>Ikuti Kami</h3>
+                <div class="social-links">
+                    
+                    <a href="https://www.tiktok.com/@luminous_elevent4?_t=ZS-8yqDrmkv0Tt&_r=1"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/luminous_elevent4?igsh=MWVwODQza3VmaDZ6ZQ=="><i class="fab fa-instagram"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2025 TimunSuriEdu. Semua hak cipta dilindungi.</p>
+        <small>By: Melfariani & Umar Khanif</small>
+    </footer>
+
+    <script>
+        // Fungsi untuk menampilkan halaman
+        function showPage(pageId) {
+            // Sembunyikan semua halaman
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Tampilkan halaman yang dipilih
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+            }
+            
+            // Update active state di navigation
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Tambahkan active class ke link yang diklik
+            event.target.classList.add('active');
+        }
+
+        // Fungsi untuk membuka modal
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Mencegah scroll
+            }
+        }
+
+        // Fungsi untuk menutup modal
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Mengembalikan scroll
+            }
+        }
+
+        // Menutup modal ketika mengklik di luar modal
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.page-modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Fungsi untuk mobile menu
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Fungsi untuk search (placeholder)
+        function performSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const searchResults = document.getElementById('searchResults');
+            
+            if (searchInput.value.trim() !== '') {
+                searchResults.style.display = 'block';
+                searchResults.innerHTML = `
+                    <div class="search-result-item">
+                        <strong>Hasil pencarian untuk: "${searchInput.value}"</strong>
+                    </div>
+                    <div class="search-result-item">
+                        <p>Fitur pencarian sedang dalam pengembangan...</p>
+                    </div>
+                `;
+            } else {
+                searchResults.style.display = 'none';
+            }
+        }
+
+
+        // Random facts
+        const facts = [
+            "Timun suri adalah salah satu buah dengan kandungan air tertinggi, mencapai 95%!",
+            "Timun suri sangat populer di Indonesia terutama saat bulan Ramadhan sebagai minuman berbuka.",
+            "Timun suri adalah buah yang sangat segar dan dapat membantu menghidrasi tubuh dengan cepat.",
+            "Tanaman timun suri dapat tumbuh dengan baik di iklim tropis dan subtropis.",
+            "Biji timun suri dapat dimakan dan memiliki kandungan nutrisi yang baik.",
+            "Timun suri adalah salah satu buah favorit untuk dibuat es buah dan jus segar.",
+            "Daun timun suri dapat digunakan sebagai pakan ternak dan memiliki kandungan protein yang baik.",
+            "Timun suri adalah buah yang sangat populer di Timur Tengah dan sering digunakan dalam hidangan tradisional.",
+            "Timun suri memiliki kandungan kalium yang tinggi, baik untuk kesehatan jantung.",
+            "Buah timun suri dapat membantu menurunkan tekanan darah secara alami.",
+            "Timun suri adalah sumber vitamin C yang baik untuk sistem kekebalan tubuh.",
+            "Tanaman timun suri dapat membantu menyejukkan lingkungan sekitar.",
+            "Timun suri sering digunakan dalam masker wajah untuk menyejukkan kulit.",
+            "Buah timun suri dapat bertahan hingga 2-3 minggu jika disimpan dengan benar.",
+            "Timun suri adalah salah satu buah yang rendah kalori, cocok untuk diet."
+        ];
+
+        function updateRandomFact() {
+            const factText = document.getElementById('factText');
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            factText.textContent = randomFact;
+        }
+
+        // Update random fact setiap 10 detik
+        updateRandomFact();
+        setInterval(updateRandomFact, 10000);
+
+        // Fungsi untuk membuka modal gambar galeri
+        function openImageModal(title, description) {
+            const modal = document.getElementById('imageModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+            const modalImage = document.getElementById('modalImage');
+            
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            modalImage.src = `images/galeri/placeholder.jpg`;
+            modalImage.alt = title;
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Fungsi untuk menutup modal gambar galeri
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Menutup modal gambar ketika mengklik di luar modal
+        window.onclick = function(event) {
+            const pageModals = document.querySelectorAll('.page-modal');
+            const imageModal = document.getElementById('imageModal');
+            
+            pageModals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            if (event.target === imageModal) {
+                imageModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body>
+</html>
